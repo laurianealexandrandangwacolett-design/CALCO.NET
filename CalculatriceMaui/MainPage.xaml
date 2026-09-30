@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatriceMaui.MainPage"
+             BackgroundColor="#121212">
+    <VerticalStackLayout Padding="15" Spacing="10">
+        <Border Stroke="#333" BackgroundColor="#1E1E1E" StrokeThickness="1" Padding="15">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label x:Name="LblOperation" Text="" FontSize="20" TextColor="#AAAAAA" HorizontalTextAlignment="End"/>
+                <Label x:Name="LblResultat" Text="0" FontSize="48" TextColor="White" HorizontalTextAlignment="End"/>
+            </VerticalStackLayout>
+        </Border>
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Text="AC" Clicked="OnClearClicked" BackgroundColor="#FF9500"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="DEL" Clicked="OnBackspaceClicked" BackgroundColor="#333" TextColor="White"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="+/-" Clicked="OnSigneClicked" BackgroundColor="#333" TextColor="White"/>
+            <Button Grid.Row="0" Grid.Column="3" Text="%" Clicked="OnPourcentageClicked" BackgroundColor="#333" TextColor="White"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Text="7" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="8" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="9" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="1" Grid.Column="3" Text="÷" Clicked="OnOperateurClicked" BackgroundColor="#FF9500" FontSize="24"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="4" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="5" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="6" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="2" Grid.Column="3" Text="×" Clicked="OnOperateurClicked" BackgroundColor="#FF9500" FontSize="24"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Text="1" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="2" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="3" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="-" Clicked="OnOperateurClicked" BackgroundColor="#FF9500" FontSize="24"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Text="0" Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="." Clicked="OnChiffreClicked" BackgroundColor="#333" TextColor="White" FontSize="24"/>
+            <Button Grid.Row="4" Grid.Column="2" Text="=" Clicked="OnEgalClicked" BackgroundColor="#FF9500" FontSize="24"/>
+            <Button Grid.Row="4" Grid.Column="3" Text="+" Clicked="OnOperateurClicked" BackgroundColor="#FF9500" FontSize="24"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
